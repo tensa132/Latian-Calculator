@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Route } from '@angular/compiler/src/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'my-app',
@@ -7,9 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+  constructor (private router : Router) {}
 
-  Operator = ""
-
+  Operator = "";
+  test = 0;
   btn1() {
     this.Operator += 1;
   }
@@ -50,6 +53,8 @@ export class AppComponent  {
     this.Operator += "*";
   }
   btnResult() {
-    
+    let result = parseFloat(this.Operator);
+    this.test = parseFloat(this.Operator);
+    this.router.navigate(['/hasil-page', result]);
   }
 }

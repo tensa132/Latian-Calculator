@@ -20,8 +20,11 @@
 <div>
   <button style="width: 25px;" (click)="btnMin()"> - </button> 
   <button style="width: 25px;" (click)="btnPlus()"> + </button> 
-  <button style="width: 25px;" (click)="btnMulti()""> * </button> 
+  <button style="width: 25px;" (click)="btnMulti()"> * </button> 
   <button style="width: 50px;" (click)="btnResult()"> = </button> <br>
 </div>
 <br>
-<h1> {{Operator}} </h1>
+<h1> {{Operator}} </h1> <br>
+<h1> {{test}} </h1> <br>
+<router-outlet>
+</router-outlet>
